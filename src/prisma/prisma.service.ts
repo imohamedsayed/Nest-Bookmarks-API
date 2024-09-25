@@ -17,8 +17,8 @@ export class PrismaService extends PrismaClient {
   // teardown logic
   cleanDb() {
     return this.$transaction([
-      this.user.deleteMany(),
       this.bookmark.deleteMany(),
+      this.user.deleteMany(),
     ]);
   }
 }
